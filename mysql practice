@@ -1,0 +1,13 @@
+select e.first_name,e.salary,e.dept,e.emp_id,p.category_id,p.product_name
+from employee as e
+left join product as p
+on e.emp_id = p.category_id
+union
+select e.first_name,e.salary,e.dept,e.emp_id,p.category_id,p.product_name
+from employee as e
+right join product as p
+on e.emp_id= p.category_id;
+select *from product;
+
+select *from product
+cross join employee;
