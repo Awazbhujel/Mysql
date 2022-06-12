@@ -1,0 +1,58 @@
+create database testdb
+use testdb
+create table person(
+person_id int,
+firstname varchar(20),
+lastname varchar(20),
+address varchar(20),
+city varchar(20),
+salary int
+);
+select *from person
+drop table table_name;
+truncate table table_name;
+alter table person
+add column email varchar(20)
+alter table person
+drop column email
+alter table person
+add dob date
+alter table person
+modify column dob year
+describe person
+
+create table employee(
+id int not null,
+lastname varchar(20),
+firstname varchar(20),
+age int
+);
+alter table employee
+modify age int not null
+select *from employee
+
+alter table employee
+modify age int  unique
+describe employee
+
+alter table employee
+add primary key (id)
+describe employee
+
+alter table employee
+drop primary key
+describe employee
+
+alter table employee
+add check (age=18)
+describe employee
+
+alter table employee
+drop column name
+
+alter table employee
+alter age set default 18
+
+create index idx_lastname
+on employee (lastname)
+select*from employee
